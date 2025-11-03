@@ -1,5 +1,5 @@
 
- *{
+ body{
     color: white;
     font-family: Helvetica;
     font-size: 1rem;
@@ -89,7 +89,8 @@
    align-items: center;
    padding: 20px 0;
    list-style-type: none;
-
+   background-color: rgb(110, 0, 52);
+   border-radius: 12px;
 
 }
 
@@ -248,7 +249,7 @@
     border-radius: 12px;
     align-content: space-evenly;
     justify-content: space-around;
-    background-color: rgb(255, 245, 231);
+    background-color: rgb(242, 226, 203);
     
   }
    .comingup-pic{
@@ -322,8 +323,10 @@
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
 
-    
-  
+}
+
+.animation a{
+  color: white;
 }
 
 .footer{

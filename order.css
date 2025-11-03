@@ -2,7 +2,7 @@
 *{
     color: white;
     font-family: Helvetica;
-    font-size: 1rem;
+
     line-height: 1.5;
   
   }
@@ -31,7 +31,7 @@
     border-radius: 10px;
     padding:2px;
 
-  }
+}
 
 
 .hero-container {
@@ -60,15 +60,14 @@
 /* navbar FLEXBOX */
 .topnav ul{
   
-   display: flex;
+    display: flex;
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
    padding: 20px 0;
    list-style-type: none;
-
-
-
+   background-color: rgb(110, 0, 52);
+   border-radius: 12px;
 }
 
 /* NAVBAR STYLING */
@@ -88,59 +87,104 @@
 }
 
 .main-container{
-    display: flex;
+   display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
 
+
 }
 
+.how-to-order{
+    max-width: 700px;
+    margin: 50px;
+    padding: 20px;
+   /*border: 2px solid var(--text-pnk-color);*/
+    border-radius: 10px;
+    background-color: rgb(15, 62, 39);
+    text-align: center;
+    font-size: 1.5rem;;
 
-.order{
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
 }
 
-.main-txt-container p{
-  padding-left: 13%;
-  padding-right: 13%;
+.how-to-order h1{
+  font-size: 3rem;
+
 }
 
-@media (min-width: 700px){
-    .main-txt-container p{
-      
-        padding-left: 13%;
-        padding-right: 13%;
-
-    }
-}
-
-.main-txt-container a{
+.how-to-order a{
     color: var(--text-pnk-color);
-}
-
-.lavendel-pic{
-    display: block;
-    object-fit: contain;
-
-    height: 400px;
-    width: 700px;
-
+    text-decoration: none;
     
-
 }
 
+.pic-container{
+    justify-content: center;
+    width: 100%;
+   
+ 
+}
+
+.img-boxes{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;                      /* centrerar innehållet i varje cell horisontellt */
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+  
+
+.img1{
+    background-image: url(pics/lavendel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+  
+}
+
+.img2{
+    background-image: url(pics/pellets.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.img3{
+    background-image: url(pics/pellets.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+  
+
+}
+.img4{
+    background-image: url(pics/pellets.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+
+
+}
 
 .footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 25px;
     padding-bottom: 25px;
+    
 }
 
 
