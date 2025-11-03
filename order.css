@@ -1,0 +1,147 @@
+
+*{
+    color: white;
+    font-family: Helvetica;
+    font-size: 1rem;
+    line-height: 1.5;
+  
+  }
+
+  :root{
+    --text-pnk-color: rgb(252, 203, 210);
+  }
+
+  @keyframes banner-animation{
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0px;
+    }
+  }
+
+  .banner{
+   
+    position:relative;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: rgb(16, 106, 62);
+    color: rgb(16, 106, 62);
+    text-align: center;
+    border-radius: 10px;
+    padding:2px;
+
+  }
+
+
+.hero-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    
+
+
+}
+
+.logo{
+    display: flex;
+    background-image: url(transparent/light\ pink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: auto;
+
+    width: 200px;    /* <- nödvändigt för att bilden ska synas, (storlek) */
+    height: 200px;   /* <- nödvändigt för att bilden ska synas, (storlek) */
+
+}
+
+
+/* navbar FLEXBOX */
+.topnav ul{
+  
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px 0;
+   list-style-type: none;
+
+
+
+}
+
+/* NAVBAR STYLING */
+
+.topnav-style{
+    color: white;
+  
+    align-content: space-evenly;
+    transition: transform .2s;
+    
+}
+
+.topnav-style:hover{
+    color: rgb(252, 203, 210);
+    transform: scale(1.10);
+   
+}
+
+.main-container{
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+
+}
+
+
+.order{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.main-txt-container p{
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+@media (min-width: 700px){
+    .main-txt-container p{
+      
+        padding-left: 13%;
+        padding-right: 13%;
+
+    }
+}
+
+.main-txt-container a{
+    color: var(--text-pnk-color);
+}
+
+.lavendel-pic{
+    display: block;
+    object-fit: contain;
+
+    height: 400px;
+    width: 700px;
+
+    
+
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+
+

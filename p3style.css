@@ -1,0 +1,70 @@
+.style{
+    color: white;
+    font-family: Helvetica;
+    font-size: 1rem;
+    background-color:rgb(16, 106, 62);
+}
+
+.hero-container {
+    text-align: center;
+
+}
+
+.logo{
+    display: flex;
+    background-image: url(transparent/light\ pink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0%;
+    border: 0%;
+    margin: auto;
+
+    width: 300px;    /* <- nödvändigt för att bilden ska synas */
+    height: 300px;   /* <- nödvändigt för att bilden ska synas */
+    margin: 0 auto;
+
+}
+
+.topnav{
+    display: flex;
+    height: 10vh;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: Helvetica;
+}
+
+
+/* NAVBAR STYLING */
+
+.topnav-style:hover{
+    color: rgb(252, 203, 210)
+
+}
+.topnav-style{
+    color: white
+}
+
+.flexcontainer1{
+    display: flex;
+    height: 50vh;
+    gap: 10px;
+    flex-direction: rerow;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-around;
+    border: solid 2px black;
+    background-color: rgb(252, 203, 210);
+    
+}
+
+.flex-item{
+    color: blue;
+    background-color: beige;
+
+}

@@ -1,0 +1,334 @@
+
+ *{
+    color: white;
+    font-family: Helvetica;
+    font-size: 1rem;
+    line-height: 1.5;
+  
+  }
+
+  :root{
+    /*bättre för font style*/
+    --box-txt-opacity: rgba(255, 255, 255, 0) ;
+    --main-txt-color: rgb(255,255,255);
+    --bg-opacity-color: rgba(0,0,0,0.3)
+  }
+
+  @keyframes banner-animation{
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0px;
+    }
+  }
+
+  .banner{
+   
+    position:relative;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: rgb(252, 203, 210);
+    color: rgb(18, 18, 144);
+    text-align: center;
+    border-radius: 10px;
+    padding:2px;
+
+    animation-name: banner-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes hero-logo-container-animation{
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+
+.hero-container {
+  margin:0;
+  text-align: center;
+
+    animation-name: hero-logo-container-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.logo{
+    display: flex;
+    background-image: url(transparent/light\ pink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: auto;
+
+    width: 200px;    /* <- nödvändigt för att bilden ska synas, (storlek) */
+    height: 200px;   /* <- nödvändigt för att bilden ska synas, (storlek) */
+
+}
+
+
+/* navbar FLEXBOX */
+.topnav ul{
+  
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px 0;
+   list-style-type: none;
+
+
+}
+
+/* NAVBAR STYLING */
+
+.topnav-style{
+    color: white;
+  
+    align-content: space-evenly;
+    transition: transform .2s;
+    
+}
+
+.topnav-style:hover{
+    color: rgb(252, 203, 210);
+    transform: scale(1.10);
+   
+}
+
+.coolkids{
+    font-size: 3rem;
+}
+
+/* TEST FLEX CONTAINER */
+   
+
+.pic-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: var(--box-txt-opacity);
+
+}
+
+
+/* BOXAR M BILDER */
+  
+.bsp, .choc, .miso{
+    flex: 1 1 400px;
+    height: 400px;
+    max-width: 400px;
+
+    position: relative;  /* behövs för ::before/::after */
+    overflow: hidden;  /* förhindrar att blur/pseudo-element sticker ut */
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+   
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+        overflow: hidden;
+}
+
+/* Mobile first, under 700px*/
+.pic-txt{
+    color: var(--main-txt-color);  
+    background-color: var(--bg-opacity-color);
+    padding-top: 10px;
+    opacity: 1;     
+    visibility: visible;            /* synlig för skärmläsare */
+    transition:
+      opacity 0.3s ease,
+      background-color 0.3s ease;
+  }
+ 
+
+/*desktop first*/
+
+@media (min-width: 700px)
+ {
+    .pic-txt {
+        opacity: 0;               /* göm text */
+        visibility: hidden;       /* göm för skärmläsare */
+        background-color: transparent; 
+      
+    }
+  
+    .bsp:hover .pic-txt,
+    .choc:hover .pic-txt,
+    .miso:hover .pic-txt {
+      opacity: 1;
+      visibility: visible;
+      background-color: rgba(0, 0, 0, 0.25);
+      padding-top: 10px;
+      padding-bottom: 100%;
+    }
+  }
+
+.bsp:hover, .choc:hover, .miso:hover{
+    color: var(--main-txt-color);
+    transform: scale(1.05);
+
+}
+ 
+
+.bsp{
+    background: url("bsp.jpg") no-repeat center center ;
+    background-size: cover;  
+    
+}
+
+.choc{
+    background: url("choc.jpg") no-repeat center center;
+    background-size: cover;  
+}
+
+.miso{
+    background: url("miso.jpg") no-repeat center center;
+    background-size: cover;
+} 
+
+.choc a, .bsp a, .miso a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .welcome-txt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+  }
+
+  @media (max-width: 700px){
+   .welcome-txt{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   }
+
+  }
+
+  .comingup-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: center;        /* vertically center picture + text column */
+    gap: 1rem;                  /* space between columns */
+    padding: 20px 0;
+    border-radius: 12px;
+    align-content: space-evenly;
+    justify-content: space-around;
+    background-color: rgb(255, 245, 231);
+    
+  }
+   .comingup-pic{
+
+   /* background-color: rgb(252, 203, 210); */
+   width: 220px;
+   height: 320px;
+   flex: 0 0 220px;            
+   background: url('pics/pop-up.png') no-repeat center center;
+   background-size: cover;
+   display: flex;              
+   align-items: center;
+   padding: 0.5rem 1rem;
+   border-radius: 12px;
+   
+
+   }
+
+   .comingup-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertical center inside .comingup-pic */
+    align-items: center;        /* horizontal center */
+    text-align: center;         /* center text lines */
+    padding: 0.5rem 1rem;
+    background-color: rgb(252, 203, 210);
+    color:  rgb(18, 18, 144);;
+    border-radius: 12px;
+
+    height: 180px;
+    width: 100vh;
+
+   }
+
+
+@keyframes moveUpAndDown{
+
+    0% {
+
+     bottom: 0px
+    }
+    100% {
+        bottom: 50px
+    }
+  
+}
+
+.animation{
+    width: 50px;
+    height: 50px;
+    position:relative; 
+
+    display: flex;                 /* Aktiverar flexbox */
+    justify-content: center;       /* Centrerar horisontellt */
+    align-items: center; 
+    justify-content: baseline;          /* Centrerar vertikalt */
+    width: 100px;
+    height: 100px;
+    background-color: rgb(214, 129, 55);
+    color:  rgb(18, 18, 144);;
+    border-radius: 100px;
+
+    animation-name: moveUpAndDown;
+    animation-duration: 1.5s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    border-radius: 100px;
+    text-align: center;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    
+  
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 25px;
+}
