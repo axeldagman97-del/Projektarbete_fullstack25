@@ -11,7 +11,9 @@
     /*bättre för font style*/
     --box-txt-opacity: rgba(255, 255, 255, 0) ;
     --main-txt-color: rgb(255,255,255);
-    --bg-opacity-color: rgba(0,0,0,0.3)
+    --bg-opacity-color: rgba(0,0,0,0.3);
+    --text-pnk-color: rgb(252, 203, 210);
+    --txt-blu-color:  rgb(18, 18, 144);
   }
 
   @keyframes banner-animation{
@@ -68,7 +70,7 @@
 
 .logo{
     display: flex;
-    background-image: url(transparent/light\ pink.png);
+    background-image: url(Gramme/logo_files/light\ pink.png);
     background-size: contain;
     background-repeat: no-repeat;
     justify-content: center;
@@ -132,7 +134,7 @@
 
 /* BOXAR M BILDER */
   
-.bsp, .choc, .miso{
+.img1, .img2, .img3{
     flex: 1 1 400px;
     height: 400px;
     max-width: 400px;
@@ -175,9 +177,9 @@
       
     }
   
-    .bsp:hover .pic-txt,
-    .choc:hover .pic-txt,
-    .miso:hover .pic-txt {
+    .img1:hover .pic-txt,
+    .img2:hover .pic-txt,
+    .img3:hover .pic-txt {
       opacity: 1;
       visibility: visible;
       background-color: rgba(0, 0, 0, 0.25);
@@ -186,25 +188,25 @@
     }
   }
 
-.bsp:hover, .choc:hover, .miso:hover{
+.img1:hover, .img2:hover, .img3:hover{
     color: var(--main-txt-color);
     transform: scale(1.05);
 
 }
  
 
-.bsp{
-    background: url("bsp.jpg") no-repeat center center ;
+.img1{
+    background: url("Gramme/apple.JPG") no-repeat center center ;
     background-size: cover;  
     
 }
 
-.choc{
-    background: url("choc.jpg") no-repeat center center;
+.img2{
+    background: url("bsp.jpg") no-repeat center center;
     background-size: cover;  
 }
 
-.miso{
+.img3{
     background: url("miso.jpg") no-repeat center center;
     background-size: cover;
 } 
@@ -276,7 +278,7 @@
     text-align: center;         /* center text lines */
     padding: 0.5rem 1rem;
     background-color: rgb(252, 203, 210);
-    color:  rgb(18, 18, 144);;
+    color:  rgb(18, 18, 144);
     border-radius: 12px;
 
     height: 180px;
@@ -296,6 +298,101 @@
     }
   
 }
+
+
+
+.img-gallery{ /* bild-container */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  padding: 0 10px;
+
+}
+
+.gallery-card{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ max-width: 500px;
+ 
+}
+
+
+.img-item{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+
+
+}
+
+.img-item1{
+  background-image: url(Gramme/fika-set.JPG); 
+  height: 150vh;
+  width: 150vh;
+  margin-top: 100px;
+ 
+
+}
+.img-item2{ 
+  background-image: url(Gramme/deg.JPG);  
+  height: 100vh;
+  width: 100vh;
+  margin-top: 50px;
+  
+}
+.img-item3{ 
+  background-image: url(lavendel.jpg);
+  height: 100vh;
+  width: 200vh;
+  margin-top: -70px;
+  border: 40px;;
+  
+}
+
+.name{
+text-align: center;
+font-size: 1.5rem;
+color: var(--txt-blu-color);
+background-color: var(--text-pnk-color);
+
+  margin-bottom: 0;
+  margin-top:100px;
+  margin-left: 140px;
+ 
+  padding: 70px;
+  z-index: 6;
+  padding-top: -110px;;
+  height: 30px;
+  width: 90vh;
+}
+
+
+
+
+@media (max-width: 700px) {
+  .img-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+  .img-item1, .img-item2, .img-item3 {
+      flex: 1 1 400px;
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+  }
+  .name {
+      margin-left: 0;
+      padding: 20px;
+      margin-top: 20px;
+  }
+}
+
+
 
 .animation{
     width: 50px;

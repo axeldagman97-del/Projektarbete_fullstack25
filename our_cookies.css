@@ -1,0 +1,157 @@
+
+*{
+    color: white;
+    font-family: Helvetica;
+
+    line-height: 1.5;
+  
+  }
+
+  :root{
+    --text-pnk-color: rgb(252, 203, 210);
+  }
+
+  @keyframes banner-animation{
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0px;
+    }
+  }
+
+  .banner{
+   
+    position:relative;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: rgb(252, 203, 210);
+    color: rgb(18, 18, 144);
+    text-align: center;
+    border-radius: 10px;
+    padding:2px;
+
+}
+
+
+.hero-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    
+
+
+}
+
+.logo{
+    display: flex;
+    background-image: url(Gramme/logo_files/light\ pink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: auto;
+
+    width: 200px;    /* <- nödvändigt för att bilden ska synas, (storlek) */
+    height: 200px;   /* <- nödvändigt för att bilden ska synas, (storlek) */
+
+}
+
+
+/* navbar FLEXBOX */
+.topnav ul{
+  
+    display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px 0;
+   list-style-type: none;
+   background-color: rgb(110, 0, 52);
+   border-radius: 12px;
+}
+
+/* NAVBAR STYLING */
+
+.topnav-style{
+    color: white;
+  
+    align-content: space-evenly;
+    transition: transform .2s;
+    
+}
+
+.topnav-style:hover{
+    color: rgb(252, 203, 210);
+    transform: scale(1.10);
+   
+}
+
+/*grid gallery*/
+
+.img-gallery{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+    
+
+}
+
+.gallery-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.img-item{
+    width: 220px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+
+}
+
+/* specifika bakgrundsbilder */
+.img-item1 { background-image: url('Gramme/apple.JPG');}
+.img-item2 { background-image: url('miso.jpg'); }
+.img-item3 { background-image: url('sesame.jpg'); }
+.img-item4 { background-image: url('lavendel.jpg'); }
+.img-item5 { background-image: url('Gramme/apple.JPG');}
+.img-item6 { background-image: url('miso.jpg'); }
+.img-item7 { background-image: url('sesame.jpg'); }
+.img-item8 { background-image: url('lavendel.jpg'); }
+
+@media (max-width: 768px) {
+    .img-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.name{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.caption{
+    margin-top: 4px;
+ 
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+
