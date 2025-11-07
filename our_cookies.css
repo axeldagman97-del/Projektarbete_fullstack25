@@ -1,14 +1,19 @@
 
-*{
-    color: white;
+.body{
     font-family: Helvetica;
-
+    color: white;
     line-height: 1.5;
   
   }
 
   :root{
+    /*bättre för font style*/
+    --box-txt-opacity: rgba(255, 255, 255, 0) ;
+    --main-txt-color: rgb(255,255,255);
+    --bg-opacity-color: rgba(0,0,0,0.3);
     --text-pnk-color: rgb(252, 203, 210);
+    --txt-blu-color:  rgb(18, 18, 144);
+    --prpl-color: rgb(110, 0, 52);
   }
 
   @keyframes banner-animation{
@@ -21,7 +26,6 @@
   }
 
   .banner{
-   
     position:relative;
     max-width: 90%;
     margin: 20px auto;
@@ -56,11 +60,19 @@
 
 }
 
+.page-container {
+     max-width: 1200px; /* samma som du vill ha */
+    margin: 0 auto;    /* centrerar allt */
+    padding: 0 16px;   /* lite luft på sidorna */
+    box-sizing: border-box;
+    
+
+  }
+  
 
 /* navbar FLEXBOX */
 .topnav ul{
-  
-    display: flex;
+   display: flex;
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
@@ -74,7 +86,6 @@
 
 .topnav-style{
     color: white;
-  
     align-content: space-evenly;
     transition: transform .2s;
     
@@ -86,17 +97,31 @@
    
 }
 
+.container-txt1{
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 12px;
+  
+
+    font-size: 1.5rem;;
+    
+}
+
+.container-txt1 h1{
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
 /*grid gallery*/
 
 .img-gallery{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    margin-top: 100px;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
+    max-width: 100%;
     box-sizing: border-box;
-    
 
 }
 
@@ -104,13 +129,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    background-color: var(--bg-opacity-color);
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.2);
+    
+  
   
 }
 
 .img-item{
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -119,30 +148,57 @@
 
 }
 
-/* specifika bakgrundsbilder */
-.img-item1 { background-image: url('Gramme/apple.JPG');}
-.img-item2 { background-image: url('miso.jpg'); }
-.img-item3 { background-image: url('sesame.jpg'); }
-.img-item4 { background-image: url('lavendel.jpg'); }
-.img-item5 { background-image: url('Gramme/apple.JPG');}
-.img-item6 { background-image: url('miso.jpg'); }
-.img-item7 { background-image: url('sesame.jpg'); }
-.img-item8 { background-image: url('lavendel.jpg'); }
-
-@media (max-width: 768px) {
-    .img-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .name{
     margin-bottom: 0;
     margin-top: 0;
+    padding-top: 20px;
+    background-color: var(-);
+    padding: 3%;
+    border-radius: 12px;
 }
 
 .caption{
     margin-top: 4px;
+    
+}
+
+.btn-item{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: var(--prpl-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
+
+.btn-item:hover{
+    background-color: var(--text-pnk-color);
+    color: var(--txt-blu-color);
+    transform: scale(1.10);
+}
+
+
+/* specifika bakgrundsbilder */
+.img-item1 { background-image: url('Gramme/apple.JPG');}
+.img-item2 { background-image: url('miso.jpg'); }
+.img-item3 { background-image: url('sesame.jpg'); }
+.img-item4 { background-image: url('lavendel.jpg');}
+
+.img-item5 { background-image: url('choc.jpg');}
+.img-item6 { background-image: url('Gramme/dark.choc.JPG');}
+.img-item7 { background-image: url('Gramme/xmas.JPG'); }
+
+
+@media (max-width: 768px) {
+    .img-gallery {
+        grid-template-columns: repeat(2, 1fr); 
  
+    }
 }
 
 

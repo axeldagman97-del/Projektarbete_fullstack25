@@ -8,7 +8,12 @@
   }
 
   :root{
+    /*bättre för font style*/
+    --box-txt-opacity: rgba(255, 255, 255, 0) ;
+    --main-txt-color: rgb(255,255,255);
+    --bg-opacity-color: rgba(0,0,0,0.3);
     --text-pnk-color: rgb(252, 203, 210);
+    --txt-blu-color:  rgb(18, 18, 144);
   }
 
   @keyframes banner-animation{
@@ -102,7 +107,7 @@
     padding: 20px;
    /*border: 2px solid var(--text-pnk-color);*/
     border-radius: 10px;
-    background-color: rgb(15, 62, 39);
+    background-color: var(--bg-opacity-color);
     text-align: center;
     font-size: 1.5rem;;
 
