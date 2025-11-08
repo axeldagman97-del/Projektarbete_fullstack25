@@ -16,15 +16,6 @@
     --prpl-color: rgb(110, 0, 52);
   }
 
-  @keyframes banner-animation{
-    0% {
-        left: 100vw;
-    }
-    100% {
-        left: 0px;
-    }
-  }
-
   .banner{
     position:relative;
     max-width: 90%;
@@ -128,6 +119,7 @@
 .gallery-card{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: var(--bg-opacity-color);
@@ -210,4 +202,74 @@
     padding-bottom: 25px;
     
 }
+.footer a{
+    color: white;
+   
+    
+}
 
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+  }
+  
+  @keyframes moveUpAndDown{
+  
+    0% {
+  
+     bottom: 0px
+    }
+    100% {
+        bottom: 50px
+    }
+  
+  }
+  
+  .animation{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      right: 40px;
+  
+  
+      display: flex;                 /* Aktiverar flexbox */
+      justify-content: center;       /* Centrerar horisontellt */
+      align-items: center; 
+      justify-content: baseline;          /* Centrerar vertikalt */
+      width: 100px;
+      height: 100px;
+      background-color: rgb(214, 129, 55);
+      color:  rgb(18, 18, 144);;
+      border-radius: 100px;
+  
+      animation-name: moveUpAndDown;
+      animation-duration: 1.5s;
+      animation-delay: 0.5;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      border-radius: 100px;
+      text-align: center;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+  
+  }
+  
+  .animation a{
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .animation {
+      right: 0px;/* Justera positionen för mindre skärmar */
+      bottom: 50px;
+      scale: 0.8; /* Minska storleken på animationen */
+  }
+  }
+  

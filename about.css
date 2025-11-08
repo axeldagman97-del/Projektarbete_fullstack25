@@ -1,22 +1,31 @@
 
-*{
+
+
+body{
+    background-color:  rgb(16, 106, 62);
     color: white;
+    line-height: 1.5;
     font-family: Helvetica;
 
-    line-height: 1.5;
-  
-  }
+}
 
-  :root{
+a[href]{
+    color: white;
+   
+}
+
+:root{
     /*bättre för font style*/
     --box-txt-opacity: rgba(255, 255, 255, 0) ;
     --main-txt-color: rgb(255,255,255);
     --bg-opacity-color: rgba(0,0,0,0.3);
     --text-pnk-color: rgb(252, 203, 210);
     --txt-blu-color:  rgb(18, 18, 144);
+    --second-bg-color:  rgb(15, 62, 39);
+    
   }
 
- 
+
   .banner{
    
     position:relative;
@@ -54,6 +63,8 @@
 }
 
 
+
+
 /* navbar FLEXBOX */
 .topnav ul{
   
@@ -65,7 +76,6 @@
    list-style-type: none;
    background-color: rgb(110, 0, 52);
    border-radius: 12px;
-   
 }
 
 /* NAVBAR STYLING */
@@ -84,48 +94,119 @@
    
 }
 
-.main-container{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-
-
-}
-
-.how-to-order{
-    max-width: 700px;
-    margin: 50px;
-    padding: 20px;
-   /*border: 2px solid var(--text-pnk-color);*/
-    border-radius: 10px;
-    background-color: var(--bg-opacity-color);
-    text-align: center;
-    font-size: 1.5rem;;
-
-}
-
-.how-to-order h1{
-  font-size: 3rem;
-
-}
-
-.how-to-order a{
-    color: var(--text-pnk-color);
+  /*dropdown menu*/
+  .navbar, .navbar a{
+   
+    color: var(--main-txt-color);
     text-decoration: none;
-    
-}
-.footer{
+    position: relative;
+    align-items: center;
+  }
+
+  .nav-list{
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    
+   
+
+  }
+
+  .dropdown{
+    margin-left: 245px;
+
+  }
+
+  @media (max-width: 768px) {
+    .dropdown{
+      margin-left: 0px;
+  
+    }
+  }
+
+  .dropbtn{
+  background-color: rgb(110, 0, 52);
+  color: var(--main-txt-color);
+  border: none;
+  margin: 0%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: solid 2px orange;
+
+
+  }
+
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:  orange;
+    min-width: 200px;
+    box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.4);
+   
+   
+    list-style: none;
+    padding: 0%;
+    z-index: 5;
+  }
+
+    .dropdown-content a{
+        color: var(--main-txt-color);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      
+    }
+
+    .dropdown-content a:hover{
+        background-color: var(--bg-opacity-color);
+       
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn{
+        background-color: orange;
+    }
+
+   
+
+@keyframes faq-container-animation{
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0px;
+    }
+    }
+
+
+.faq-container{
+    position: relative;
+    text-align: center;
+    background-color: var(--second-bg-color);
+
+    margin-left: 20%;
+    margin-right: 20%;
+
+    animation-name: faq-container-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.faq-container h2{
+    color: rgb(252, 203, 210);
 }
 
-
+.faq-container p{
+    color: var(--main-txt-color);
+    padding: 0 15px 15px 15px;
+    text-align: center;
+}
 
 .footer{
     display: flex;
@@ -190,4 +271,3 @@
   }
   }
   
-

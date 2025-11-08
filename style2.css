@@ -7,6 +7,10 @@
   
   }
 
+  a[href]{
+    color: white;
+  }
+
   :root{
     /*bättre för font style*/
     --box-txt-opacity: rgba(255, 255, 255, 0) ;
@@ -287,119 +291,95 @@
    }
 
 
-@keyframes moveUpAndDown{
+   /* GALLERI LAYOUT */
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) 3fr; /* Auto-wrappning */
+  gap: 0px;
+  max-width: 90%;
+  min-height: 1000px;
+  margin: 60px auto;
+  justify-items: center;
+  box-sizing: border-box;
+}
 
-    0% {
-
-     bottom: 0px
-    }
-    100% {
-        bottom: 50px
-    }
+/* VARJE BILDKORT */
+.gallery-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   
 }
 
-
-
-.img-gallery{ /* bild-container */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0px;
-  padding: 0 10px;
-
-}
-
-.gallery-card{
- display: flex;
- flex-direction: column;
- align-items: center;
-
- max-width: 500px;
- 
-}
-
-
-.img-item{
+/* GRUNDSTIL FÖR BILD */
+.img-item {
+  width: 100%;
+  height:600px;
+  aspect-ratio: 1 / 1; /* kvadratisk form */
   background-size: cover;
   background-position: center;
-  position: relative;
-  align-items: center;
-
 
 }
 
-.img-item1{
-  background-image: url(Gramme/fika-set.JPG); 
-  height: 150vh;
-  width: 150vh;
-  margin-top: 100px;
- 
 
+
+/* COLLLAGEVARIATIONER */
+.gallery-card.tall .img-item {
+  aspect-ratio: 3 / 4;
 }
-.img-item2{ 
-  background-image: url(Gramme/deg.JPG);  
-  height: 100vh;
-  width: 100vh;
-  margin-top: 50px;
-  margin-left: 200px;
+
+.gallery-card.wide .img-item {
+  aspect-ratio: 16 / 9;
+}
+
+/* RESPONSIV ANPASSNING */
+@media (max-width: 900px) {
+  .img-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .img-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .img-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   
 }
-.img-item3{ 
-  background-image: url(lavendel.jpg);
-  height: 100vh;
-  width: 200vh;
-  margin-top: -70px;
-  border: 40px;;
-  
-}
 
-.name{
-text-align: center;
-font-size: 1.5rem;
-color: var(--txt-blu-color);
-background-color: var(--text-pnk-color);
+@keyframes moveUpAndDown{
 
-  margin-bottom: 0;
-  margin-top:100px;
-  margin-left: 140px;
- 
-  padding: 70px;
-  z-index: 6;
-  padding-top: -110px;
-  height: 30px;
-  width: 90vh;
-}
+  0% {
 
-
-
-
-@media (max-width: 700px) {
-.img-gallery {
-      flex-direction: column;
-      align-items: center;
+   bottom: 0px
   }
-  .img-item1, .img-item2, .img-item3 {
-      flex: 1 1 400px;
-      width: 300px;
-      height: auto;
-      margin-top: 20px;
+  100% {
+      bottom: 50px
   }
-  .name {
-      margin-left: 0;
-      padding: 20px;
-      margin-top: 20px;
-  }
+
 }
-
-
 
 .animation{
     width: 50px;
     height: 50px;
-    position:relative; 
-    left: -200px;
+    position: relative;
+    right: 40px;
+
 
     display: flex;                 /* Aktiverar flexbox */
     justify-content: center;       /* Centrerar horisontellt */
@@ -428,9 +408,11 @@ background-color: var(--text-pnk-color);
   color: white;
 }
 
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 25px;
+@media (max-width: 768px) {
+  .animation {
+    right: 0px;/* Justera positionen för mindre skärmar */
+    bottom: 50px;
+    scale: 0.8; /* Minska storleken på animationen */
 }
+}
+
