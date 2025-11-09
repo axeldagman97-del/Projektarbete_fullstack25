@@ -13,21 +13,31 @@
 
   :root{
     /*bättre för font style*/
-    --box-txt-opacity: rgba(255, 255, 255, 0) ;
+    --box-txt-opacity: rgba(255, 255, 255, 0);
     --main-txt-color: rgb(255,255,255);
     --bg-opacity-color: rgba(0,0,0,0.3);
     --text-pnk-color: rgb(252, 203, 210);
     --txt-blu-color:  rgb(18, 18, 144);
   }
 
-  @keyframes banner-animation{
+  @keyframes banner-color{
+    0%   {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    33%  {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    66%  {background-color: var(--txt-blu-color); color: var(--main-txt-color)}
+    100% {background-color:  var(--txt-blu-color) ; color: var(--main-txt-color)}
+    
+  }
+
+
+  @keyframes banner-movement-animation{
     0% {
-        left: 100vw;
+        transform: translateX(100vw);
     }
     100% {
-        left: 0px;
+        transform: translateX(0);
     }
   }
+
 
   .banner{
    
@@ -40,14 +50,16 @@
     border-radius: 10px;
     padding:2px;
 
-    animation-name: banner-animation;
+    animation-name: banner-movement-animation;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
 
-  }
+
+
 
   @keyframes hero-logo-container-animation{
     0% {
@@ -79,6 +91,7 @@
     background-repeat: no-repeat;
     justify-content: center;
     margin: auto;
+    cursor: pointer;
 
     width: 200px;    /* <- nödvändigt för att bilden ska synas, (storlek) */
     height: 200px;   /* <- nödvändigt för att bilden ska synas, (storlek) */

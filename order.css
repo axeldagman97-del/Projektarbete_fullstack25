@@ -17,6 +17,14 @@
   }
 
  
+  @keyframes banner-color{
+    0%   {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    33%  {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    66%  {background-color: var(--txt-blu-color); color: var(--main-txt-color)}
+    100% {background-color: var(--txt-blu-color); color: var(--main-txt-color)}
+    
+  }
+
   .banner{
    
     position:relative;
@@ -28,6 +36,11 @@
     border-radius: 10px;
     padding:2px;
 
+    animation-name: banner-color;
+    animation-duration: 5s;  
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+  
 }
 
 
@@ -35,9 +48,7 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    
-
-
+  
 }
 
 .logo{
@@ -126,16 +137,6 @@
     text-decoration: none;
     
 }
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    
-}
-
-
 
 .footer{
     display: flex;

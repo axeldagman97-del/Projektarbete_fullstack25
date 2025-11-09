@@ -16,7 +16,17 @@
     --prpl-color: rgb(110, 0, 52);
   }
 
+ 
+  @keyframes banner-color{
+    0%   {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    33%  {background-color: var(--text-pnk-color); color: var(--txt-blu-color) } 
+    66%  {background-color: var(--txt-blu-color); color: var(--main-txt-color)}
+    100% {background-color: var(--txt-blu-color); color: var(--main-txt-color)}
+    
+  }
+
   .banner{
+   
     position:relative;
     max-width: 90%;
     margin: 20px auto;
@@ -26,8 +36,12 @@
     border-radius: 10px;
     padding:2px;
 
+    animation-name: banner-color;
+    animation-duration: 5s;  
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+  
 }
-
 
 .hero-container {
     margin-top: 0;
