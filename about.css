@@ -173,33 +173,28 @@ a[href]{
 
 @keyframes faq-container-animation{
     0% {
-        left: 100vw;
+        opacity: 0;
     }
     100% {
-        left: 0px;
+        opacity: 1;
     }
     }
-
 
 .faq-container{
     position: relative;
     text-align: center;
     background-color: var(--second-bg-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 
     margin-left: 20%;
     margin-right: 20%;
-
-    animation-name: faq-container-animation;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-
+    padding: 2rem;
+    
+    animation: faq-container-animation 0.3s ease-in 0.2s 1 forwards;
 }
+
 .faq-container h2{
-    color: rgb(252, 203, 210);
+    color: rgb(0, 255, 26);
 }
 
 .faq-container p{
